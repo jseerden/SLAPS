@@ -95,7 +95,7 @@ else {
     else {
         # Add the new Local User to the Local Administrators group
         try {
-            Add-LocalGroupMember -Group "Administrators" -Member $userName
+            Add-LocalGroupMember -SID 'S-1-5-32-544' -Member $userName
             Write-Output "Added Local User '$userName' to Local Administrators Group"
         }
         catch {
